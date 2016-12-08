@@ -1,5 +1,5 @@
 <?php
-// include 'input.php';
+
 class Employee {
     
     const STATUS_ON_DUTY = 1;
