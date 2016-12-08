@@ -1,5 +1,5 @@
 <?php
-
+// include 'input.php';
 class Employee {
     
     const STATUS_ON_DUTY = 1;
@@ -17,11 +17,12 @@ class Employee {
     }
 
     public function getManager() {
-        // obvious
+        return $this->manager;
     }
 
     public function setManager(Employee $manager) {
         // should set the manager and return self
+        $this->manager = $manager->name;        
     }
 
     public function getSubordinates() {
