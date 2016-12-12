@@ -25,7 +25,11 @@ class Employee {
     }
 
     public function getSubordinates() {
-        // should return array of direct subordinates
+        return $this->subordinates;
+    }
+
+    public function setSubordinates(array $subordinates) {
+        $this->subordinates = $subordinates;
     }
 
     public function getStatus() {
@@ -34,5 +38,13 @@ class Employee {
 
     public function setStatus($status) {
         $this->status = $status;
+    }
+
+    public function getEmploymentDate() {
+        return $this->employmentDate;
+    }
+
+    public function setEmploymentDate($date) {
+        $this->employmentDate = $date;
     }
 }
