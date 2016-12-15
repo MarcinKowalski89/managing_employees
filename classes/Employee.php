@@ -21,12 +21,30 @@ class Employee {
     }
 
     public function setManager(Employee $manager) {
-        // should set the manager and return self
         $this->manager = $manager->name;        
     }
 
     public function getSubordinates() {
-        // should return array of direct subordinates
+        return $this->subordinates;
     }
 
+    public function setSubordinates(array $subordinates) {
+        $this->subordinates = $subordinates;
+    }
+
+    public function getStatus() {
+        return $this->status;
+    }
+
+    public function setStatus($status) {
+        $this->status = $status;
+    }
+
+    public function getEmploymentDate() {
+        return $this->employmentDate;
+    }
+
+    public function setEmploymentDate($date) {
+        $this->employmentDate = $date;
+    }
 }
