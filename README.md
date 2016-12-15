@@ -98,8 +98,8 @@ Possible use case:
 $adam = ...;
 
 $search = Search::getInstance();
-$christopheFilter = new FilterByName("Christophe", $adam);
-$christophe = ($search->run($christopheFilter))[0];
+$christopheFilter = new FilterByName("Christophe");
+$christophe = ($search->run($christopheFilter, $adam))[0];
 
 $leaveFilter = new FilterByStatus(Employee::STATUS_ON_LEAVE);
 $durationFilter = new FilterByEmploymentDateGreaterThan(time() - 365 * 86400); // 1 year
