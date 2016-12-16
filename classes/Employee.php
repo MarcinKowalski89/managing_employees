@@ -16,6 +16,10 @@ class Employee {
         $this->name = $name;
     }
 
+    public function getName() {
+        return $this->name;
+    }
+
     public function getManager() {
         return $this->manager;
     }
