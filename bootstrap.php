@@ -78,5 +78,3 @@ $noliag->setEmploymentDate(strtotime('11-06-2012'));
 $ola->setEmploymentDate(strtotime('14-02-2011'));
 $pepe->setEmploymentDate(strtotime('08-06-2016'));
 $roberto->setEmploymentDate(strtotime('12-12-2015'));
-
-var_dump($betty->getSubordinates());
