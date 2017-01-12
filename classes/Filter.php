@@ -15,10 +15,7 @@ class FilterByName implements IFilter {
     }
 
     public function match(Employee $employee) {
-        if($this->name === $employee->getName()) {
-            return true;
-        }
-        return false;
+        return $this->name === $employee->getName();
     }
 }
 
@@ -31,9 +28,6 @@ class FilterByStatus implements IFilter {
     }
 
     public function match(Employee $employee) {
-        if($this->status === $employee->getStatus()) {
-            return true;
-        }
-        return false;
+        return $this->status === $employee->getStatus();
     }
 }
