@@ -11,9 +11,22 @@ class Search {
        return self::$instance;
    }
     
+    /**
+     * Run a search on hierarchy of employees using given filter as criterion
+     *
+     * @param IFilter $filter to use as search criterion
+     * @param Employee $employee being tip of a hierarchy to start searching from
+     * @return Employee[]
+     */
     public function run(IFilter $filter, Employe $employee) {
-        // should return array of employees matching the filter condition
-        // starting from given employee in organizational hierarchy    
+        $found = [];
+        if ($filter->match($employee)) {
+            $found[] = $employee;
+        }
+        foreach ($employee->getSubordinates() as $subordinate) {
+            // $found += (TODO: recursive search)
+        }
+        return $found;
     }
 
 }
