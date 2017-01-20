@@ -1,7 +1,7 @@
 <?php
 
-include './classes/Employee.php';
-include './classes/Filter.php';
+include_once './classes/Employee.php';
+include_once './classes/Filter.php';
 
 class FilterByNameTest extends PHPUnit_Framework_TestCase {
 

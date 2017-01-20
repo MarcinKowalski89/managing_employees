@@ -82,23 +82,12 @@ $roberto->setEmploymentDate(strtotime('12-12-2015'));
 $search = Search::getInstance();
 $christopheFilter = new FilterByName("Christophe");
 $chris = ($search->run($christopheFilter, $adam))[0];
-// var_dump($chris);
 
-// $leaveFilter = new FilterByStatus(Employee::STATUS_ON_DUTY);
 $leaveFilter = new FilterByStatus(Employee::STATUS_DISMISSED);
 $adamStatus = $leaveFilter->match($adam);
-// var_dump($adamStatus);
 
 $durationFilter = new FilterByEmploymentDateGreaterThan(strtotime('01-01-2009'));
 $result = $durationFilter->match($adam);
-// var_dump($result);
 
 $andFilter = new FilterConjunction([$leaveFilter, $durationFilter]);
 $adamsfilter = $andFilter->match($adam);
-// var_dump($adamsfilter);
-
-$abc = $search->run($leaveFilter, $adam);
-foreach ($abc as $data) {
-   echo $data->getName();
-   echo $data->getStatus();
-};
