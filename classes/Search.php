@@ -18,14 +18,15 @@ class Search {
      * @param Employee $employee being tip of a hierarchy to start searching from
      * @return Employee[]
      */
-    public function run(IFilter $filter, Employee $employee) {
-        static $found = [];
+    public function run(IFilter $filter, Employe $employee) {
+        $found = [];
         if ($filter->match($employee)) {
             $found[] = $employee;
         }
         foreach ($employee->getSubordinates() as $subordinate) {
-            $found += Search::run($filter, $subordinate);
+            // $found += (TODO: recursive search)
         }
         return $found;
     }
-} 
+
+}
