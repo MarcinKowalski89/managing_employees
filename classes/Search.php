@@ -18,7 +18,7 @@ class Search {
      * @param Employee $employee being tip of a hierarchy to start searching from
      * @return Employee[]
      */
-    public function run(IFilter $filter, Employe $employee) {
+    public function run(IFilter $filter, Employee $employee) {
         $found = [];
         if ($filter->match($employee)) {
             $found[] = $employee;
