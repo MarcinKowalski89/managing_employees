@@ -23,7 +23,7 @@ class SearchTest extends PHPUnit_Framework_TestCase {
      * @covers run
      */
     public function test_run_returns_resursive_search_results_array() {
-    	$filter = $this->getMock("IFilter");
+    	$filter = $this->createMock("IFilter");
     	$filter->expects($this->exactly(3))
     		->method("match")
     		->will($this->returnValue(true));
