@@ -24,7 +24,7 @@ class Search {
             $found[] = $employee;
         }
         foreach ($employee->getSubordinates() as $subordinate) {
-            // $found += (TODO: recursive search)
+            $found = array_merge($found, (Search::run($filter, $subordinate)));
         }
         return $found;
     }
